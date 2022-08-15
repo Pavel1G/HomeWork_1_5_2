@@ -5,7 +5,9 @@ public class Main {
         java.util.Random random = new java.util.Random();
         int[] arr = new int[30];
         for (int i = 0; i < arr.length; i++) {
+
             arr[i] = random.nextInt(40_000) + 10_000;
+
         }
         return arr;
     }
