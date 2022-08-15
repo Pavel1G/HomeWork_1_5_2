@@ -5,7 +5,7 @@ public class Main {
         java.util.Random random = new java.util.Random();
         int[] arr = new int[30];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = random.nextInt(100_000) + 100_000;
+            arr[i] = random.nextInt(40_000) + 10_000;
         }
         return arr;
     }
@@ -25,13 +25,13 @@ public class Main {
         int minValueOfDay = Integer.MAX_VALUE;
         int maxValueOfDay = Integer.MIN_VALUE;
 
-        for (int j : arr) {
-            if (minValueOfDay > j) {
-                minValueOfDay = j;
+        for (int costPerDay : arr) {
+            if (minValueOfDay > costPerDay) {
+                minValueOfDay = costPerDay;
                 continue;
             }
-            if (maxValueOfDay < j) {
-                maxValueOfDay = j;
+            if (maxValueOfDay < costPerDay) {
+                maxValueOfDay = costPerDay;
             }
         }
         System.out.println("Минимальная сумма трат за день составила " + minValueOfDay + " рублей. " +
@@ -39,7 +39,7 @@ public class Main {
         System.out.println("--------------------------------------");
 
         // Task 03.
-        System.out.println("Средняя сумма трат за месяц составила " + total / arr.length + " рублей");
+        System.out.println("Средняя сумма трат за месяц составила " + (float) total / arr.length + " рублей");
         System.out.println("--------------------------------------");
 
         // Task 04.
